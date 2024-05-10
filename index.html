@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Web Header</title>
+  </head>
+  <body>
+    <nav>
+      <div class="menu-container nav-wrapper">
+        <div class="brand">
+          <a class="active" href="index.html">
+            <img
+              src="https://spayu.co.in/assets/img/about/insurance.png"
+              height="50"
+              alt="insurance-logo"
+            />
+          </a>
+          <h1>Insurance</h1>
+        </div>
+        <div class="hamberger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-list">
+          <li>
+            <a href="#">Services</a>
+            <ul class="dropdown-list">
+              <li><a href="#">Life Insurance</a></li>
+              <li><a href="#">Health Insurance</a></li>
+              <li><a href="#">Property Insurance</a></li>
+              <li><a href="#">Auto Insurance</a></li>
+              <li><a href="#">Pet Insurance</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contacts</a></li>
+          <li>
+            <button class="btn btn-blue"><a href="#">Get Started</a></button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <script>
+      window.addEventListener("load", function () {
+        addRequiredClasses();
+      });
+
+      function addRequiredClasses() {
+        if (window.innerWidth < 860) {
+          document.body.classList.add("mobile");
+        } else {
+          document.body.classList.remove("mobile");
+        }
+      }
+
+      let hamberger = document.querySelector(".hamberger");
+      let mobileNav = document.querySelector(".nav-list");
+
+      let bars = document.querySelectorAll(".hamberger span");
+
+      let isActive = false;
+
+      hamberger.addEventListener("click", function () {
+        mobileNav.classList.toggle("open");
+
+        if (!isActive) {
+          bars[0].style.transform = "rotate(45deg)";
+          bars[1].style.opacity = "0";
+          bars[2].style.transform = "rotate(-45deg)";
+          isActive = true;
+        } else {
+          bars[0].style.transform = "rotate(0deg)";
+          bars[1].style.opacity = "1";
+          bars[2].style.transform = "rotate(0deg)";
+          isActive = false;
+        }
+      });
+    </script>
+  </body>
+</html>
