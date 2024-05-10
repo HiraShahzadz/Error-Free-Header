@@ -4,7 +4,7 @@
 </p>
 <h1 align="center">Error Free Navigation Bar</h1>
 <h3 align="center">Behindev task 2 Error Free and Responsive Code in HTML,css and js</h3>
-<p  align="center"><a  href="https://hirashahzadz.github.io/HS-Art-Website/">
+<p  align="center"><a  href="https://hirashahzadz.github.io/Error-Free-Header/">
     <img src="https://img.shields.io/badge/-Clich%20Here%20to%20See%20Website-<COLOR>?style=flat-square&logo=appveyor&logoColor=white" alt="Cv Button">
 </a>
 </p>
